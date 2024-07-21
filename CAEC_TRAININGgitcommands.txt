@@ -1,0 +1,96 @@
+C:\AEC_TRAINING>git init
+Initialized empty Git repository in C:/AEC_TRAINING/.git/
+C:\AEC_TRAINING>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        HIBERNATE.pptx
+        INSTALLATION_OF_SOFTWARE.txt
+        LIST OF IMPORTANT DEPENDENCIES.txt
+        Log4j2Demo/
+        MAVEN COMMANDS.txt
+        META-INF/
+        log4j2.properties
+C:\AEC_TRAINING>git add .
+warning: in the working copy of 'META-INF/persistence.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'log4j2.properties', LF will be replaced by CRLF the next time Git touches it
+
+C:\AEC_TRAINING>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   HIBERNATE.pptx
+        new file:   INSTALLATION_OF_SOFTWARE.txt
+        new file:   LIST OF IMPORTANT DEPENDENCIES.txt
+        new file:   Log4j2Demo/.classpath
+        new file:   Log4j2Demo/.project
+        new file:   Log4j2Demo/.settings/org.eclipse.core.resources.prefs
+        new file:   Log4j2Demo/.settings/org.eclipse.jdt.core.prefs
+        new file:   Log4j2Demo/.settings/org.eclipse.m2e.core.prefs
+        new file:   Log4j2Demo/logs/myapp.log
+        new file:   Log4j2Demo/pom.xml
+        new file:   Log4j2Demo/src/main/java/com/arindam/App.java
+        new file:   Log4j2Demo/src/main/java/com/arindam/Test.java
+        new file:   Log4j2Demo/src/main/resources/Log4j2.xml
+        new file:   Log4j2Demo/src/test/java/com/arindam/AppTest.java
+        new file:   Log4j2Demo/target/classes/Log4j2.xml
+        new file:   Log4j2Demo/target/classes/META-INF/MANIFEST.MF
+        new file:   Log4j2Demo/target/classes/META-INF/maven/com.arindam/Log4jDemo/pom.properties
+        new file:   Log4j2Demo/target/classes/META-INF/maven/com.arindam/Log4jDemo/pom.xml
+        new file:   Log4j2Demo/target/classes/com/arindam/App.class
+        new file:   Log4j2Demo/target/classes/com/arindam/Test.class
+        new file:   Log4j2Demo/target/test-classes/com/arindam/AppTest.class
+        new file:   MAVEN COMMANDS.txt
+        new file:   META-INF/persistence.xml
+        new file:   log4j2.properties
+
+C:\AEC_TRAINING>git commit -m "Training Software Installation & Files"
+[main (root-commit) 305c9c7] Training Software Installation & Files
+ 24 files changed, 441 insertions(+)
+ create mode 100644 HIBERNATE.pptx
+ create mode 100644 INSTALLATION_OF_SOFTWARE.txt
+ create mode 100644 LIST OF IMPORTANT DEPENDENCIES.txt
+ create mode 100644 Log4j2Demo/.classpath
+ create mode 100644 Log4j2Demo/.project
+ create mode 100644 Log4j2Demo/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 Log4j2Demo/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 Log4j2Demo/.settings/org.eclipse.m2e.core.prefs
+ create mode 100644 Log4j2Demo/logs/myapp.log
+ create mode 100644 Log4j2Demo/pom.xml
+ create mode 100644 Log4j2Demo/src/main/java/com/arindam/App.java
+ create mode 100644 Log4j2Demo/src/main/java/com/arindam/Test.java
+ create mode 100644 Log4j2Demo/src/main/resources/Log4j2.xml
+ create mode 100644 Log4j2Demo/src/test/java/com/arindam/AppTest.java
+ create mode 100644 Log4j2Demo/target/classes/Log4j2.xml
+ create mode 100644 Log4j2Demo/target/classes/META-INF/MANIFEST.MF
+ create mode 100644 Log4j2Demo/target/classes/META-INF/maven/com.arindam/Log4jDemo/pom.properties
+ create mode 100644 Log4j2Demo/target/classes/META-INF/maven/com.arindam/Log4jDemo/pom.xml
+ create mode 100644 Log4j2Demo/target/classes/com/arindam/App.class
+ create mode 100644 Log4j2Demo/target/classes/com/arindam/Test.class
+ create mode 100644 Log4j2Demo/target/test-classes/com/arindam/AppTest.class
+ create mode 100644 MAVEN COMMANDS.txt
+ create mode 100644 META-INF/persistence.xml
+ create mode 100644 log4j2.properties
+
+C:\AEC_TRAINING>git remote -v
+
+C:\AEC_TRAINING>git branch
+* main
+C:\AEC_TRAINING>git remote add origin https://github.com/arindamslt/AECTRAINING.git
+
+C:\AEC_TRAINING>git push -u origin main
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (49/49), 41.78 KiB | 6.96 MiB/s, done.
+Total 49 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/arindamslt/AECTRAINING.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
