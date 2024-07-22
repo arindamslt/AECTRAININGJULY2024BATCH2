@@ -1,0 +1,217 @@
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| abs                |
+| aec                |
+| aiem               |
+| aiem1              |
+| bootdb             |
+| bootreact          |
+| btrtdb             |
+| dbs                |
+| fdapps             |
+| foodapp            |
+| foodapps           |
+| fooddb             |
+| foodsdb            |
+| hbdb               |
+| hbdbs              |
+| hbsdb              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| restdb             |
+| sys                |
+| test               |
+| testdb             |
+| testing            |
+| tst                |
++--------------------+
+25 rows in set (0.02 sec)
+CREATE DATABASE AECDB;
+SHOW DATABASES;
+LOGIN IN DATABASE
+=======================
+USE AECDB;
+SHOW TABLES;
+TABLE:CUSTOMER
+======================
+FIELD   DATATYPE   SIZE   CONSTRAINTS
+=========================================
+CID    VARCHAR     10
+CNAME  VARCHAR     25
+CPHNO  VARCHAR     10
+==========================================
+CREATE TABLE CUSTOMER
+(CID VARCHAR(10),
+ CNAME VARCHAR(25),
+ CPHNO VARCHAR(10)
+);
+SHOW TABLES;
+INSERT INTO CUSTOMER VALUES('C1','ARUP','2222');
+SELECT * FROM CUSTOMER;
+TABLE WITH CONSTRAINTS
+===================================================
+TABLE:PRODUCT
+==============================================
+FILEDS       DATA TYPE    SIZE CONSTRAINTS
+===========================================
+PID           VARCHAR     10    PRIMARY KEY
+PNAME         VARCHAR     25    NOT NULL
+PQTY          NUMBER
+PRICE         DECIMAL
+==========================================================
+CREATE TABLE PRODUCT
+(PID   VARCHAR(10) PRIMARY KEY,
+ PNAME VARCHAR(25) NOT NULL,
+ PQTY  INT,
+ PRICE DECIMAL);
+
+DESC PRODUCT;
+mysql> DESC PRODUCT;
++-------+---------------+------+-----+---------+-------+
+| Field | Type          | Null | Key | Default | Extra |
++-------+---------------+------+-----+---------+-------+
+| PID   | varchar(10)   | NO   | PRI | NULL    |       |
+| PNAME | varchar(25)   | NO   |     | NULL    |       |
+| PQTY  | int           | YES  |     | NULL    |       |
+| PRICE | decimal(10,0) | YES  |     | NULL    |       |
++-------+---------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+INSERT INTO PRODUCT VALUES('P1','TV',5,25000.00);
+SELECT * FROM PRODUCT;
+mysql> SELECT * FROM PRODUCT;
++-----+-------+------+-------+
+| PID | PNAME | PQTY | PRICE |
++-----+-------+------+-------+
+| P1  | TV    |    5 | 25000 |
++-----+-------+------+-------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO PRODUCT VALUES('P1','TV',5,25000.00);
+ERROR 1062 (23000): Duplicate entry 'P1' for key 'product.PRIMARY'
+INSERT INTO PRODUCT VALUES('P2',NULL,6,27000.00);
+mysql> INSERT INTO PRODUCT VALUES('P2',NULL,6,27000.00);
+ERROR 1048 (23000): Column 'PNAME' cannot be null
+=================================================
+TABLE:DEPT
+=======================================
+FIELD NAME    DATA TYPE   SIZE   CONSTRAINTS
+================================================
+DEPTID        VARCHAR    10      PRIMARY KEY
+DNAME         VARCHAR    25      NOT NULL
+LOC           VARCHAR    25      NOT NULL
+===========================================================
+CREATE TABLE DEPT 
+(DEPTID   VARCHAR(10),
+ DNAME    VARCHAR(25) NOT NULL,
+ LOC      VARCHAR(25) NOT NULL,
+CONSTRAINT DEPT_DEPTID_PK PRIMARY KEY(DEPTID)
+);
+=============================================
+
+INSERT INTO DEPT VALUES('D1','MKTG','KOLKATA');
+INSERT INTO DEPT VALUES('D2','FINANCE','CHENNAI');
+INSERT INTO DEPT VALUES('D3','IT','DELHI');
+=======================================================
+TABLE:EMP
+====================================================
+FIELDS     DATA TYPE      SIZE    CONSTRAINTS
+===================================================
+EMPNO      VARCHAR         10      PRIMARY KEY
+ENAME      VARCHAR         25      NOT  NULL
+JOB        VARCHAR         25
+SAL        DECIMAL
+COMM       DECIMAL
+DEPTID     VARCHAR         10      FOREIGN KEY
+===========================================================
+CREATE TABLE EMP
+(EMPNO  VARCHAR(10),
+ ENAME  VARCHAR(25) NOT NULL,
+ JOB    VARCHAR(25),
+ SAL    DECIMAL,
+ COMM   DECIMAL,
+ DEPTID VARCHAR(10),
+CONSTRAINT EMP_EMPNO_PK PRIMARY KEY(EMPNO),
+CONSTRAINT EMP_DEPTNO_FK FOREIGN KEY(DEPTID)  REFERENCES DEPT(DEPTID)
+);
+=====================================================================
+INSERT INTO EMP VALUES('E1','AYAN','MANAGER',50000.00,2000.00,'D1');
+INSERT INTO EMP VALUES('E2','AJOY','CLERK',25000.00,1000.00,'D1');
+INSERT INTO EMP VALUES('E3','RUPAM','ANALYST',4000.00,50000,'D2');
+INSERT INTO EMP VALUES('E4','ROBIN','MANAGER',60000.00,5000.00,'D2');
+INSERT INTO EMP VALUES('E5','ANNANYA','CLERK',30000.00,3000.00,'D2');
+INSERT INTO EMP VALUES('E6','ALOKE','HR',45000.00,3000.00,'D3');
+=====================================================================
+CREATE
+INSERT 
+FETCH ALL ROWS
+==========================
+SELECT * FROM EMP;
+SPECIFIC COLUMN DATA
+============================================
+SELECT ENAME,JOB,SAL FROM EMP;
+RESTRICTION OF DATA
+================================================
+WHERE CONDITION
+================================
+SELECT * FROM EMP WHERE ENAME='RUPAM';
+
+mysql> INSERT INTO EMP VALUES('E3','RUPAM','ANALYST',4000.00,50000,'D2');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM EMP WHERE ENAME='RUPAM';
++-------+-------+---------+------+-------+--------+
+| EMPNO | ENAME | JOB     | SAL  | COMM  | DEPTID |
++-------+-------+---------+------+-------+--------+
+| E3    | RUPAM | ANALYST | 4000 | 50000 | D2     |
++-------+-------+---------+------+-------+--------+
+1 row in set (0.00 sec)
+
+SELECT * FROM EMP WHERE JOB='MANAGER';
+
+SELECT * FROM EMP WHERE JOB IN('MANAGER','CLERK');
+SELECT * FROM EMP WHERE JOB  NOT IN('MANAGER','CLERK');
+
+SELECT * FROM EMP WHERE JOB='CLERK' AND SAL>25000;
+
+SELECT * FROM EMP WHERE JOB='CLERK' OR SAL>25000;
+LIKE OPERATOR
+===============================================================
+SELECT * FROM EMP WHERE ENAME LIKE 'A%';
+SELECT * FROM EMP WHERE ENAME LIKE '_J%';
+SELECT * FROM EMP WHERE ENAME LIKE '%E';
+SELECT * FROM EMP WHERE ENAME LIKE '%A%';
+DUPLICATE TABLE WITH DATA
+=========================================
+CREATE TABLE EMP1 AS SELECT * FROM EMP;
+SELECT * FROM EMP1;
+========================================
+CREATE TABLE EMP2 AS SELECT * FROM EMP WHERE 1=2;
+
+===========================================================================
+DELETE FROM EMP WHERE EMPNO='E6';
+UPDATE THE DATA
+================================================
+UPDATE EMP SET SAL=75000.00,JOB='ANALYST' WHERE EMPNO='E5';
+
+
+
+
+
+
+
+
+
+
+
+
+
+

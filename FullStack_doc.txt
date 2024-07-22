@@ -1,0 +1,166 @@
+DATE:22.07.2024
+==================================================
+FULL STACK DEVELOPER
+===============================================
+PROJECT
+=================================
+FRONT END
+BACKEND
+DATABASE
+REAL TIMES TOOLS
+==========================================
+1.MAVEN
+2.GRADEL
+3.JUNIT
+4.MOCKITO
+5.POSTMAN
+6.SWAGGER
+7.DOCKER
+8.KUBERNETES
+9.SONARQUBE
+10.JIRA
+11.JOCCO
+12.LOG4J2
+=============================================================================
+SOFTWARE
+================================
+JAVA17
+IDE
+==================
+STS===SPRING TOOL SUITE
+
+MYSQL
+POSTMAN
+
+FRONT END
+=========================
+VISUAL CODE STUDIO
+=========================================================================
+DBMS
+===========================================================================
+DATABASE MANAGEMENT SYSTEM
+========================================================================
+DATABASE
+==================================================================
+DATABASE IS COLLECTION OF INTERELATED TABLES OR DATA
+=======================================================
+DBMS 
+============================
+RDBMS
+==================================
+RELATIONAL DATABASE MANAGEMENT SYSTEM
+================================================================================================
+DBMS=DATABASE+SQL
+SQL===STRUCTURED QUERY LANGUGAE
+============================================================
+
+JAVA==3RD GEN===HLL
+BOTH HOW  PART AND WHAT PART KNOWN TO  US
+SQL===4GL==NON PROCEDURAL LANGUAGE
+HERE  HOW PART IS NOT KNOWN TO USE
+ONLY WHAT PART IS KNOWN TO US
+SELECT * FROM EMP;
+COMMANDS OF SQL
+===============================================================
+1.DDL==DATA DEFINATION LANGUAGE
+CREATE,TRUNCATE,DROP,ALTER,RENAME
+2.DML
+===============================
+DATA MANIPULATION LANGUAGE
+=================================
+INSERT,UPDATE,DELETE,MERGE
+DATA  RETRIEVAL
+=================================
+SELECT
+==================================
+TCL==TRANSACTION CONTROL LANGUAGE
+===============================
+COMMIT,ROLLBACK,SAVEPOINT
+DCL
+==================================
+DATA CONTROL LANGUAGE
+==================================
+GRANT,REVOKE
+DBMS RDBMS
+========================
+CONCEPT
+MYSQL,ORACLE,SQLSERVER,POSTGRESQL
+===============================================================
+ADVANTAGE OF DBMS
+================================
+1.MINIMIZE DATA REDUNDENCY
+2.DATA CAN BE SHARED
+3.SECURITY RESTRICTION PROVIDED
+4.INTEGRITY CONSTRAINTS MAINTAINED
+==================================
+DATATYPE OF MYSQL
+=============================================
+VARCHAR===ALPHANUMERIC===A01
+VARCHAR(10)
+DECIMAL
+NUMBER(5)===99999
+NUMBER(7,2)===99999.99
+DATE
+======================
+YYYY-MM-DD
+==============================================
+CONSTRAINTS
+========================================================================
+BEFORE INSERTING ANY ROW INTO A TABLE YOU HAVE TO SATISFY CTAIN RULES AND REGULATIONS CALLED CONSTRAINTS
+TYPES OF CONSTRAINTS
+====================================
+1.PRIMARY KEY===IT DOESN'T ACCEPT NULL VALUE AS WELL AS DUPLICATE VALUE
+2.UNIQUE KEY===IT DOESN'T ACCEPT NULL VALUE BUT ACCEPT DUPLICATE VALUE
+3.NOT NULL=YOU CAN'T LEFT BLANK TO THE FIELD
+4.CHECK CONSTRAINTS===IT WILL SUPPORT PREDEFINED VALUES
+EX:GENDER==M/F,MARITAL STATUS==Y/N
+5.FOREIGN KEY==IT WIIL ACCEPT OTHER TABLE PRIMARY KEY VALUE
+===========================================================================
+LOGIN MYSQL
+====================
+1.MYSQL WORKBENCH
+2.MYSQL COMMAND LINE CLIENT
+3.COMMAND PROMPT
+
+
+
+
+
+
+
+
+
+'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
