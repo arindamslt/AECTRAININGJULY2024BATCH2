@@ -309,8 +309,41 @@ ADHNO    STRING  10  PK
 CITY     STRING  25  NOT NULL
 343434  KOLKATA
 566556  CHENNAI
-
-
+===================================================================================
+DATE:24.07.2024
+================================================================================
+MAPPING RELATIONSHIP
+=================================================================
+1.ONE TO ONE MAPPING
+2.ONE TO MANY MAPPING
+3.MANY TO ONE MAPPING
+4.MANY TO MANY MAPPING
+==============================================================================
+CRUD OPERATION USING HIBERNATE
+======================================================
+TABLE:STUDENT
+ROLLNO====10====VARCHAR======PRIMARY KEY
+SNAME=====25=====VARCHAR=====NOT NULL
+SDEPT=====25======VARCHAR====NOT NULL
+==================================================
+FETCH DATA IN HIBERNATE CAN BE DONE BY THREE WAYS
+====================================================
+1.JPQL===JAVA PERSISTENCE  QUERY LANGUAGE====CLASS NAME
+2.HQL====HIBERNATE QUERY LANGUAGE===ENTITY CLASS NAME
+3.NATIVE SQL===NORMAL
+String hql="from Student where sdept=:v_sdept";
+REGISTER
+========================================
+UNAME   VARCHAR      15   PK
+PASS    VARCHAR      10   NOT NULL
+NM      VARCHAR      25   NOT NULL
+EMAIL   VARCHAR      30   NOT NULL
+========================================
+arindam123  1234    arindam  a@gmail.com
+deep123     test    DEEP     de@gmail.com
+arindam123  1234
+arindam123  5678
+=========================================================
 
 
 
