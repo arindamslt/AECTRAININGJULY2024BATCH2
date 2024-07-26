@@ -344,8 +344,101 @@ deep123     test    DEEP     de@gmail.com
 arindam123  1234
 arindam123  5678
 =========================================================
-DATE:25.07.2024
+SPRING
+====================================================================
+TYPES OF APPLICATION
+======================================
+1.DESKTOP APPLICATION===CORE JAVA,AWT,SWING,HIBERNATE.SPRING   =====.JAR FILE
+2.WEB APPLICATION======SERVLET,JSP,HTML,CSS,JAVASCRIPT,SPRING MVC  =====.WAR FILE
+3.ENTERPRISE APPLICATION===EJB,SPRING                           =====.EAR(.JAR+.WAR)
+======================================================================================
+DEFINATION OF SPRING
+====================================
+SPRING IS AN OPEN SOURCE LIGHT WEIGHT DEPENCY INJECTION BASED FRAMEWORK SOFTWARE
+TO DEVELOP JAVA/JEE BASED ENTERPRISE APPLICATION
+================================================================================
+HEAVY WEIGHT
+====================================================
+.java====compile===.class===container===.java==.class===o/p
+LIGHT WEIGHT
 =========================================================
+.java===compile===.class==container==.class==O/P
+POJO CLASSES
+XML FILE/ANNOTATION
+FRAMEWORK
+=========================================================
+CONCEPT    TECHNOLOGIES
+DATABASE===JDBC
+MAILING ===JAVAMAIL
+MESSAGING===JMS/KAFKA
+FRAMEWORK==TECHNOLOGIES+DESIGN PATTERN
+DESIGN PATTERN 
+==============================
+WELL APPROVED SOLUTION
+============================================================================
+FEATURES OF SPRING
+=======================================
+1.IT SUPPORT CONTAINER SYSTEM
+CONTAINER SYSTEM
+================================
+1.SCAN THE CLASSES
+2.CREATE THE OBJECT
+3.PROVIDE THE DATA TO THE OBJECT
+4.DESTROY THE OBJECT
+SPRING CONTAINER
+============================
+1.BeanFactory
+2.ApplicationContext===ALSO CALLED IOC(INVERSION CONTROL)
+WHAT IS THE ROLE OF PROGRAMMER
+========================================
+DEPEN DENCY
+================================
+INSTANCE VARIABLE IN SPRING BEAN CLASS CALLED DEPENDENCY
+DEPENDENCY INJECTION
+===================================
+PROVIDE/UPDATE DATA INTO DEPENDENCY CALLED DEPENDENCY INJECTION
+TYPES OF DEPENDENCY INJECTION
+=====================================
+1.PRIMITIVE TYPES==INTEGER,DOUBLE,FLOAT
+2.COLLECTION TYPES===LIST,SET,MAP,PROPERTIES
+3.OBJECT REFERENCE
+4.CONSTRUCTOR INJECTION
+=========================================
+MODULES OF SPRING
+=============================
+1.SPRING CORE
+2.SPRING DAO
+3.SPRING CONTEXT
+4.SPRING AOP
+5.SPRING ORM
+6.SPRING WEB MVC
+SPRING CORE
+===============================
+THE RULES AND REGULATION GIVEN BY SPRING
+RULES
+==========================
+1.SPRING BEAN CLASS SHOULD BE PUBLIC
+2.GETTER()  & SETTER() METHOD
+3.CONSTRUCTOR
+4.CONSTRUCTOR WITH PARAMETER
+5.toString()
+6.EQUALS()
+7.HASHCODE()
+======================================
+SETTER INJECTION
+========================================
+application.properties
+@Value("${eid}")
+@Value("${ename}")
+colgnm={RAMAN,ROBIN,ALOKE,ROBIN}
+
+	@Value("#{${job}}")
+
+
+
+
+
+
 
 
 
