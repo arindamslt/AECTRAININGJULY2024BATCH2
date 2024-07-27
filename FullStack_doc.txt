@@ -433,20 +433,357 @@ application.properties
 colgnm={RAMAN,ROBIN,ALOKE,ROBIN}
 
 	@Value("#{${job}}")
+DATE:25.07.2024
+===========================================================
+LINKING BETWEEN THE OBJECTS IN SPRING CONTAINER BY MEANS OF @Autowired
+.
+LIMITATION OF SPRING
+=================================================================================
+1.WE NEED USE LOT OF DEPENDENCIES WITH COMPATABLE VERSION
+2.WE HAVE TO CONFIGURE LOT OF THINGS
+3.APPLICATON TO BE DEPLOYED IN EXTERNAL SERVER
+EX:TOMCAT,JBOSS,WEBLOGIC,WEBSPHERE
+SPRING BOOT
+=========================================================================================
+SPRING BOOT IS AN ARCHIETECTURAL STYLE WHICH IS WORK ON TOP OF THE SPRING
+ADVANTAGE
+==========================================
+1.STARTER DEPENDENCY
+===========================================
+RELATED JAR FILES OF DIFFERENT GROUP TOGETHER INTO SINGLE UNIT
+SPRING BOOT STARTER DEPENDENDENCY
+SPRING BOOT STARTER WEB
+2.AUTOCONFIGURATION
+===========================================================
+BY DEFAULT AUTO CONFIGURATION IS DISABLED
+@EnableAutoConfiguration
+3.EMBEDDED SERVER
+PURPOSE
+=====================
+RAPID APPLICATION DEVELOPMENT
+SPRING BOOT PROJECT
+=================================
+1.MAVEN
+2.SPRING INITIALIZER
+3.SPRING BOOT STARTER
+
+@SpringBootApplication
+=================================================================
+@EnableAutoConfiguration
+@ComponentSacn
+@Configuration
+WHY YML IS BETTER
+==========================================================================
+1.NO INDEX DUPLICATION TOOK PLACE
+2.IT IS MORE READABLE THAN PROPERTIES FILES
+==========================================================================
+SPRING BOOT JDBC 
+===========================================================================
+TABLE:ACCOUNT
+=============================================
+FIELDS     DATA TYPE     SIZE         CONSTRAINTS
+=====================================================
+ACCNO       VARCHAR       10          PRIMARY KEY
+CNAME       VARCHAR       25          NOT NULL
+BALANCE     DECIMAL
+=================================================================
+
+CREATE TABLE ACCOUNT
+(ACCNO  VARCHAR(10) PRIMARY KEY,
+ CNAME  VARCHAR(25) NOT NULL,
+ BALANCE  DECIMAL);
+LOMBOK
+MYSQL
+JDBC API
+
+JdbcTemplate
+update()
+queryForList()
 
 
+WEB APPLICATION USING SPRING BOOT
+==========================================================
+1.LOMBOK
+2.SPRING WEB====TOMCAT
+3.SPRING DEV TOOLS
+localhost:1004/show
+SPRING+HIBERNATE USING SPRING BOOT
+====================================================================================================================
+SPRING DATA JPA
+===========================================================================
+HERE TWO INTERFACES ARE THERE
+CrudRepository<T,ID>=======INTERFACE
+JpaRepository<T,ID>=======INTERFACE
+T==ENTITY CLASS NAME
+ID===PRIMARY KEY DATA TYPE
+save()
+findAll()
+findById()
+delete()
+
+JpaRepository<T,ID> extends CrudRepository<T,ID>
+save()
+findAll()
+findById()
+delete()
+DEPENDENCY
+================================
+1.LOMBOK
+2.SPRING DATA JPA
+3.MYSQL
+================================================
+SERVICE CLASS===============COM.ARINDAM.SERVICE
+REPOSITORY INTERFACE========COM.ARINDAM.REPOSITORY
+ENTITY CLASS=================COM.ARINDAM.ENTITY
+MAIN CLASS
+====================================================================
+DATE:27.07.2024
+====================================================================
+RESTFULL WEBSERVICES
+====================================================================
+WEBSERVICE
+================================================
+IT IS USED TO COMMUNICATE TWO INTEROPERABLE APPLICATION
+===================================================
+TYPES OF WEBSERVICES
+===============================
+TWO TYPES
+=============================
+1.SOAP===SIMPLE OBJECT ACCESS PROTOCOL====IT WILL ACCEPT ONLY XML DATA
+2.REST==REPRESETATIONAL STATE TRANSFER===IT SUPPORT BOTH XML AND JSON
+ACTION BASED URL
+==========================================
+http://www.abc.com/?id=1
+                    QUERY PARAMETER
+RESOURCE BASED URL
+===================================
+http://www.abc.com/1
+                   PATH PARAMETER OR VARIABLE
+======================================================
+HTTP METHODS
+=====================
+1.GET====GET THE DATA FROM SERVER
+2.POST===ADD OR POST DATA TO THE SERVER
+3.DELETE===DELETE THE DATA TO THE SERVER
+4.PUT======UPDATE DATA TO THE SERVER
+=========================================================
+HTTP STATUS CODE
+=========================================================
+404==== NOT FOUND
+500====INTERNAL SERVERB ERROR
+200===OK
+===============================================================
+JSON==JAVASCRIPT OBJECT NOTATION
+{
+    "id":101,
+    "name":"SUMAN",
+    "phno":"455445"
+
+}
+REST API TOOL
+================================
+POSTMAN
+SWAGGER===ALSO PERFORM DOCUMENTATION
+========================================
+RESTCONTROLLER
+===========================================
+CONTROLLER +RESPONSE BODY
+@RestController===OBJECT CREATION AND REST KIND OF WEBSERVICE APPLICATION
+FLOW OF RESTAPI APPLICATION
+========================================
+DEPENDENCY REQUIRED FOR REST API APPLICATION
+===============================================
+1.MYSQL
+2.LOMBOK
+3.SPRING DATA JPA
+4.SPRING WEB
+5.SPRING BOOT DEV TOOLS
+========================================================
+http://localhost:1004/order/add
+{
+  "oid":"100",
+  "oqty":1,
+  "price":500.00
+}
+
+public ResponseEntity<List<Order>> getData()
+	{
+		List<Order> olist=oservice.getData();
+		return new ResponseEntity<List<Order>>(olist,HttpStatus.OK);
+		
+	}
 
 
+http://localhost:1004/order/fetch/100
+
+@GetMapping("/fetch/{oid}")
+	public ResponseEntity<Order> findByOrderId(@PathVariable String oid)
+	{
+		Order o=oservice.findByOrderId(oid);
+		return new ResponseEntity<Order>(o,HttpStatus.OK);
+	}
+
+http://localhost:1004/order/del/101
+	@DeleteMapping("/del/{oid}")
+	public ResponseEntity<String> deleteData(@PathVariable String oid)
+	{
+		String msg1="DATA DELETED SUCEESFULLY";
+		oservice.deleteData(oid);
+		return new ResponseEntity<String>(msg1,HttpStatus.OK);
+	}
+
+http://localhost:1004/order/upd/100
+public Order updateData(String oid,Order ord)
+{
+    Order o=orepo.findById(oid).orElse(null);
+		if(o!=null)
+		{
+			o.setOid(oid); 
+                        o.setOqty(ord.getOqty());
+                        o.setPrice(ord.getPrice());
+                        orepo.save(o);
+
+		}
+               return o;
+}
+public Order updateData(String oid,Order ord)
+	{
+		Order o=orepo.findById(oid).orElse(null);
+		if(o!=null)
+		{
+			o.setOid(oid);
+			o.setOqty(ord.getOqty());
+			o.setPrice(ord.getPrice());
+			orepo.save(o);
+		}
+		return o;
+	}
 
 
+@PutMapping("/upd/{oid}")
+	public ResponseEntity<Order> updateData(@PathVariable String oid,@RequestBody Order ord)
+	{
+		Order o=oservice.updateData(oid, ord);
+		return new ResponseEntity<Order>(o,HttpStatus.OK);
+	}
+=====================================================================
+FRONT END DEVELOPMENT
+===================================================================
+REACT JS
+================================
+PREREQUISITE
+=========================================
+HTML
+CSS
+JAVASCRIPT
+=====================================================================
+JAVASCRIPT IS A PROGRAMMING LANGUAGE BECAUSE IT CAN COMMUNICATE TO DATABASE AND APPLICATION SERVER.
+BEFORE 2010 IT CALLED SCRIPTING LANGUAGE
+====================================================================================
+PURPOSE
+========================================
+1.TO DEVELOP DYNAMIC USER INTERFACE
+2.CILENT SIDE AND SERVER SIDE VALIDATION
+3.COMMUNICATE WITH FROND END AND BACK END APPLICATION
+====================================================================
+AREAS OF JAVASCRIPT USED
+============================
+1.WEB APPLICATION
+2.MOBILE APPLICATION
+3.DESKTOP APPLICATION
+4.ML APP
+===================================================================
+NODE JS===JAVASCRIPT RUNTIME ENVIRONMENT'
+IDE==VISUAL STUDIO CODE
+=================================================================
+VARIABLE IN JAVASCRIPT
+==================================
+NAMED STORED LOCATION 
+TYPES OF VARIBLE
+==============================
+1.PRIMITIVE TYPE
+=====================================
+NUMBER,STRING,BOOLEAN,SYMBOL,NULL,UNDEFINED,BYTE
+2.NON PRIMITIVE TYPE
+=======================================
+OBJECT
+==============================================================
+VARIABLE CAN BE CREATED BY
+=============================
+VAR,LET,CONST
+=================================================
+TYPES OF FUNCTION IN JAVASCRIPT
+========================================
+1.NORMAL FUNCTION
+2.PARAMETERISED FUNCTION
+3.FUNCTION WITH RETURN VALUE
+4.ANNONYMOUS FUNCTION
+5.HIGHER ORDER FUNCTION
+6.CALLBACK FUNCTION
+7.ARROW FUNCTION
+
+//ANNONYMOUS AND CALLBACK FUNCTION
+function fn4(f)
+{
+    console.log(f);
+    f();
+}
+fn4(function(){
+    var city='KOLKATA';
+    console.log(city);
+})
+fn5(print);
+HIGER  callback function
+ORDER
+FUNCTION
+
+arr.forEach(function(element,index){
+   console.log(index,element); 
+})
 
 
+//MAP FUNCTION RETURN A ARRAY
+var newArray1=arr.map(function(element,index){
+    return element*10;
+})
+console.log(newArray1);
 
+var employee={
+    eid:101,
+    ename:'SUMAN',
+    edesig:'MANAGER',
+    address:{
+        plotno:'AD10',
+        streetnm:'SALTLAKE CITY',
+        pincode:'700091',
+        area:{
+            ps:'BIDHANAGAR',
+            dist:'24PGS(N)'
+        }
+    }
+}
+console.log(employee);
+eid ename plotno pincode ps
+console.log(employee.eid,employee.ename,employee.address.plotno,employee.address.pincode,
+employee.address.area.ps);
 
-
-
-
-
+ES6
+======================
+ECMA SCRIPT
+=========================================================
+1.SPREAD OPERATOR
+2.REST PARAMETER
+3.LET CONST VAR
+4.ARROW FUNCTION
+5.FOR EACH LOOP USING ARROW FUNCTION
+6.MAP() USING ARROW FUNCTION
+7.FILTER() USING ARROW FUNCTION
+8.DESTRUCTING THE OBJECT
+9.PROMISE OBJECT
+=============================================================================
+arr.forEach((element,index)=>{
+        console.log(index,element); 
+    })
 
 
 
