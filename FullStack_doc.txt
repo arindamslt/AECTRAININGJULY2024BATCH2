@@ -784,6 +784,87 @@ ECMA SCRIPT
 arr.forEach((element,index)=>{
         console.log(index,element); 
     })
+=============================================================================
+DATE:28.07.2024
+============================================================================
+DOM
+=========================================
+DOCUMENT OBJECT MODEL
+THE HTML DOCUMENT IS CONVERTED TO OBJECTS CALLED NODES AND IT WILL FORM A TREE LIKE
+DATASTRUCTURE CALLED DOM
+==================================================================
+HTML DOCUMENT=========BROWSER ENGINE====BYTES===TOKENS===NODES
+ACCESS THE DOM ELEMENT B Y MEANS OF
+=======================================
+ID
+CLASS
+ATTRIBUTE
+TAG NAME
+
+REACT JS
+====================================================================
+REACT IS JAVASCRIPT LIBRARY.
+JAVASCRIPT LIBRARY IS COLLECTION OF PREDEFINED CLASSES AND FUNCTIONS
+PURPOSE
+===================================================
+TO DEVELOP DYNAMIC USER INTERFACE
+FRONT END ==REACTJS+OTHER LIBRARIES
+=========================================================
+COMPONENTS IN REACT
+======================================
+TWO TYPES
+==================================
+CLASS COMPONENT
+FUNCTIONAL COMPONENT
+=====================================
+REACT.createElement()===REACT ELEMENT
+CREATE REACT ELEMENT====ReactDOM===PUSH THE REACT ELEMENT TO THE DOM
+====================================================================
+JSX==99% TO THE HTML
+JSX FILE===BABEL COMPILER===REACT ELEMENT====GIVEN TO ===REACT DOM===PUSHES TO===DOM==RENDERING
+JSX CODE TO BE WRITTEN IN FUNCTIONAL COMPONENT
+=========================================================
+FUNCTIONAL COMPONENT RULES
+============================================
+IT IS STARTED WITH CAPTIAL LETTER
+AND RETURN UI I.E. JSX
+CRA TOOL
+==============================
+CREATE REACT APP TOOL
+=================================================
+NPM==NODE PACKAGE MANAGER
+npm create-react-app reactappdemo===INSTALL CRA TOOL
+npx create-react-app  reactappdemo===RUN THE CRA TOOL
+====================================================
+REACT HOOKS
+=====================================================
+REACT HOOK IS A SPECIAL FUNCTION USED SPECIFIC PURPOSE
+EXAMPLS
+=============================
+useState==DYNAMIC DATA HANDELLING
+========================================================================
+Ex:
+==============================================
+let[state,setState]=useState();
+useEffect
+useRef
+useContext
+useCallback
+================================================================
+let[data,setData]=useState({
+                            name:"",
+                            gender:"",
+                            email:"",
+                            description:""
+                            });
+===============================================================
+PROPS
+===============================================================
+TRANSFER THE DATA FROM ONE COMPONENT TO ANOTHER COMPONENT
+
+
+
+
 
 
 

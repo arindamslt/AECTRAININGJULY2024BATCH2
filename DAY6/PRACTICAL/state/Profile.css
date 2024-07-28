@@ -1,0 +1,12 @@
+.mainContainer{
+    /*background-color: red;*/
+    display: flex;
+}
+.lfContainer{
+    /*background-color: blue;*/
+    width: 30%;
+}
+.rtContainer{
+    /*background-color: gray;*/
+    width: 70%;
+}
