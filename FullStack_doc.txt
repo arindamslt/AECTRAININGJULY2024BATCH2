@@ -869,9 +869,17 @@ PROPS DRILLING
 
 CONTEXT API
 ================================================================
+AXIOS
+==============================================================
+IT IS A EXTERNAL LIBRARY.
+WHEN WE COMMUNICATE TO EXTERNAL APPLICATION THEN WE NEED AXIOS LIBRARY
+npm install axios
 
-
-
+  <tr>
+                      <td>{index+1}</td>
+                       <td>{element.name.first}</td>
+                       <td><img src={element.picture.medium} height={80} width={80}/></td>
+                        </tr>
 
 
 
