@@ -17,6 +17,8 @@ function Nav() {
        <a href="/user">USER</a>
        <a href="/userinfo">USERINFO</a>
        <a href="/product">PRODUCT</a>
+       <a href="/orderreport">ORDER REPORT</a>
+       <a href="/addorder">ADD ORDER</a>
       </div>
     </div>
   )

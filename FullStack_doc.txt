@@ -902,6 +902,8 @@ Nav.js
 Nav.css
 NESTED ROUTING
 =====================================================================
+INTEGRATE BOOT WITH REACT
+@CrossOrigin(origins="http://localhost:3000/")
 
 
 
