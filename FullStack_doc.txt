@@ -880,6 +880,31 @@ npm install axios
                        <td>{element.name.first}</td>
                        <td><img src={element.picture.medium} height={80} width={80}/></td>
                         </tr>
+USEEFFCT
+==================================================================
+DATE:30.07.2024
+===================================================================
+REACT 
+======================================================================
+REACT ELEMENT
+FUNCTIONAL ELEMENT
+STATE===PROFILE
+PROPS
+PROPS DRILLING
+CONTEXT API
+AXIOS
+USEEFFECT
+CONDITIONAL RENDERING
+TO TRAVERSE FROM ONE COMPONENT TO ANOTHER WE NEED THE CONCEPT OF ROUTING & NESTED ROUTING
+========================================================================================
+npm install react-router-dom
+Nav.js
+Nav.css
+NESTED ROUTING
+=====================================================================
+
+
+
 
 
 
