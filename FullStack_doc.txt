@@ -907,7 +907,51 @@ INTEGRATE BOOT WITH REACT
 ======================================================================
 DATE:31.07.2024
 =====================================================================
+IMPLEMENT PROJECT USING SPRING BOOT REACT AND MYSQL
+======================================================================
+SOFTWARE:JAVA17,MYSQL
+IDE===STS,VISUAL STUDIO CODE,POSTMAN
+TECHNOLOGY===SPRING BOOT WITH DATA JPA
+FROND END PART:REACT JS
+========================================================================
+MYSQL
+================================
+DATABASE:FOODAPPDB
+BACKEND PART
+=============================
+SPRING BOOT STARTER PROJECT===FOODAPP
+DEPENDENCY ADDED
+======================================
+MYSQL
+SPRING DATA JPA
+SPRING WEB
+SPRING BOOT DEV TOOLS
+LOMBOK
+=====================================================
+REACT PROJECT
+==================================================
+FOODAPP
+=================================================
+npx create-react-app foodapp
+CD FOODAPP>npm install axios
+           npm install react-router-dom
+           npm install bootstrap
+=================================================
+http://localhost:1004/food/add=========METHOD POST
+{
+  "fid":"F1",
+  "fname":"MOMO",
+  "price":300.00
+}
+======================================================
+http://localhost:1004/food/fetch========METHOD GET
 
+http://localhost:1004/food/fetch/F1=====METHOD GET
+
+http://localhost:1004/food/del/F2 ========METHOD DELETE
+
+http://localhost:1004/food/upd/F1=========METHOD PUT
+===========================================================
 
 
 
