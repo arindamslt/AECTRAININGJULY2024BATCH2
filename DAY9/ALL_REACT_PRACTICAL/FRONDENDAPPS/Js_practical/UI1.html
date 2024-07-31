@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const changeToH2=()=>{
+         var h2Ref=document.getElementById("domh");
+           h2Ref.innerText="DOM MANIPULATION BY JAVASCRIPT";
+        }
+        const changeTop=()=>{
+            var pRef=document.getElementById("domp");
+            pRef.innerText="JAVASCRIPT EVENT HANDELLING";
+        }
+    </script>
+</head>
+<body>
+    <H2 id="domh">DOM</H2>
+    <p id="domp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet aperiam rerum, dolore in consequuntur reprehenderit alias vel maiores, blanditiis nulla ex. Quos assumenda molestiae incidunt officiis sapiente, temporibus ex adipisci, iure numquam vel impedit cum suscipit autem asperiores doloribus omnis aut optio id! Omnis eligendi pariatur labore at? Reprehenderit, tempore!</p>
+    <button onclick="changeToH2()">CHANGETOH2</button>
+    <button onclick="changeTop()">CHANGETOP</button>
+</body>
+</html>
