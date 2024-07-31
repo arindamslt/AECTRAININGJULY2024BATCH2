@@ -1,0 +1,22 @@
+.navMainContainer{
+    /*background-color: red;*/
+    display: flex;
+   
+}
+.navLContainer{
+    background-color:black;
+    color: white;
+    width: 30%;
+}
+.navRContainer{
+   /* background-color: gray;*/
+   background-color:black;
+   color: white;
+    width: 70%;
+    display: flex;
+}
+.navRContainer a{
+    color: white;
+    text-decoration: none;
+    margin: 10px auto;
+}
