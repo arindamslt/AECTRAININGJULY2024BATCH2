@@ -1,0 +1,23 @@
+.pdMainContainer{
+    display: flex;
+}
+.pdLConatiner{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 30%;
+    margin-top: 10px;
+}
+.pdLConatiner a{
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 10px auto;
+    
+   
+}
+pdRContainer{
+    width: 70%;
+    
+    
+}
